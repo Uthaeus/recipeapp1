@@ -43,6 +43,8 @@ function Signup() {
                     />
                     { errors.password_confirmation && <span>This field is required</span>}
                 </div>
+
+                <button type='submit'>Enter</button>
             </form>
         </div>
     );
