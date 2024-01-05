@@ -6,10 +6,11 @@ function RecipeItem(props) {
     const image = props.image || img;
     return (
         <Link to={`/${props.id}`} className="recipe-item">
-            <image 
-                src={`url(${image})`}
+            <img 
+                src={image}
                 className="recipe-item-image"
                 width='100%'
+                alt='recipe'
             />
 
             <div className="recipe-item-details">
