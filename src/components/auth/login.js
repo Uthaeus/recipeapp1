@@ -1,10 +1,14 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
 
 function Login() {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
+    const navigate = useNavigate();
 
     const submitHandler = () => {
-        console.log('submitting login....')
+        console.log('submitting login....');
+
+        navigate('/');
     }
 
     return (
