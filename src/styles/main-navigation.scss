@@ -1,0 +1,39 @@
+
+.main-navigation {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 40px;
+    background-color: beige;
+    border-bottom: 2px solid blanchedalmond;
+
+    .main-nav-link {
+        font-size: 1.2rem;
+        color: grey;
+        text-decoration: none;
+        padding: 0 15px;
+        transition: transform 300ms ease-in-out, color 300ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+            color: black;
+        }
+    }
+
+    .active-link {
+        font-size: 1.5rem;
+        color: purple;
+        border-bottom: 1px solid purple;
+    }
+
+    .main-navigation-left {
+        padding-left: 15%;
+        display: flex;
+        align-items: center;
+    }
+
+    .main-navigation-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

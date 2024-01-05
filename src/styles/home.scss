@@ -1,0 +1,17 @@
+
+.home {
+    padding: 0 3%;
+
+    .home-title {
+        font-size: 2.4rem;
+        color: rgb(24, 27, 29);
+        text-align: center;
+    }
+
+    .home-recipe-list-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        grid-template-rows: minmax(150px, auto);
+    }
+}
