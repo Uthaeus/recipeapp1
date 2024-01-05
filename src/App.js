@@ -6,6 +6,7 @@ import Error from "./pages/error";
 import AuthLayout from "./components/auth/auth-layout";
 import Login from "./components/auth/login";
 import Signup from "./components/auth/signup";
+import RecipeDetail from "./components/recipe/recipeDetail";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />
+      },
+      {
+        path: '/:id',
+        element: <RecipeDetail />
       }
     ]
   },
