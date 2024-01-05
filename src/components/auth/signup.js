@@ -8,6 +8,7 @@ function Signup() {
 
         if (data.password !== data.password_confirmation) {
             console.log('data does not match');
+            reset();
             return 
         }
         console.log('username: ', data.username);
@@ -44,7 +45,7 @@ function Signup() {
                     { errors.password_confirmation && <span>This field is required</span>}
                 </div>
 
-                <button type='submit'>Enter</button>
+                <button type='submit' className="btn-primary mt-2">Enter</button>
             </form>
         </div>
     );
