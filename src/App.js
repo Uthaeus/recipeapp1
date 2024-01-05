@@ -7,6 +7,7 @@ import AuthLayout from "./components/auth/auth-layout";
 import Login from "./components/auth/login";
 import Signup from "./components/auth/signup";
 import RecipeDetail from "./components/recipe/recipeDetail";
+import NewRecipe from "./components/recipe/new-recipe";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/:id',
         element: <RecipeDetail />
+      },
+      {
+        path: '/new',
+        element: <NewRecipe />
       }
     ]
   },
