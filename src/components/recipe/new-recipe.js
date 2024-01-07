@@ -11,12 +11,15 @@ function NewRecipe() {
     }
 
     const addIngredientHandler = () => {
+        if (ingredient === '') {
+            return;
+        }
         setIngredients([...ingredients, ingredient]);
         setIngredient('');
     }
 
     const submitHandler = (data) => {
-        console.log(data);
+        console.log(data, ingredients);
     };
 
     return (
@@ -53,7 +56,7 @@ function NewRecipe() {
                 <div className="form-group">
                     <label id='ingredient'>Ingredient</label>
                     <input type='text' className="form-control" id='ingredient' value={ingredient} onChange={ingredientChangeHandler} />
-                    <button className="ingredient-btn" onClick={addIngredientHandler}>Add Ingredient</button>
+                    <p className="ingredient-btn" onClick={addIngredientHandler}>Add Ingredient</p>
                 </div>
 
                 <div className="form-group">
