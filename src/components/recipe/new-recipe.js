@@ -1,7 +1,19 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 function NewRecipe() {
     const { register, handleSubmit, formState: {errors}} = useForm();
+    const [ingredient, setIngredient] = useState();
+    const [ingredients, setIngredients] = useState([]);
+
+    const ingredientChangeHandler = e => {
+        setIngredient(e.target.value);
+    }
+
+    const addIngredientHandler = () => {
+        setIngredients([...ingredients, ingredient]);
+        setIngredient('');
+    }
 
     const submitHandler = (data) => {
         console.log(data);
@@ -30,6 +42,18 @@ function NewRecipe() {
                         {...register('time', {required: true})}
                     />
                     {errors.time && <span>field is required</span>}
+                </div>
+
+                <div className="ingredient-list">
+                    {ingredients.length > 0 && (
+                        ingredients.map(i => <p>{i}</p>)
+                    )}
+                </div>
+
+                <div className="form-group">
+                    <label id='ingredient'>Ingredient</label>
+                    <input type='text' className="form-control" id='ingredient' value={ingredient} onChange={ingredientChangeHandler} />
+                    <button className="ingredient-btn" onClick={addIngredientHandler}>Add Ingredient</button>
                 </div>
 
                 <div className="form-group">
