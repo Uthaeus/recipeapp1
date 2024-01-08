@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function NewRecipe() {
     const { register, handleSubmit, formState: {errors}} = useForm();
-    const [ingredient, setIngredient] = useState();
+    const [ingredient, setIngredient] = useState('');
     const [ingredients, setIngredients] = useState([]);
 
     const ingredientChangeHandler = e => {
@@ -56,7 +56,7 @@ function NewRecipe() {
                 <div className="form-group">
                     <label id='ingredient'>Ingredient</label>
                     <input type='text' className="form-control" id='ingredient' value={ingredient} onChange={ingredientChangeHandler} />
-                    <p className="ingredient-btn" onClick={addIngredientHandler}>Add Ingredient</p>
+                    <p className="add-ingredient-btn" onClick={addIngredientHandler}>Add Ingredient</p>
                 </div>
 
                 <div className="form-group">
